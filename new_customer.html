@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/form.css">
+      <link rel="stylesheet" href="css/new_customer.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" type="image/png" href="images\icon.png">
+      <title>MyTMS - Create New Customer</title>
+   </head>
+   <body>
+      <!-- Header -->
+      <header></header>
+      <!-- Main Content -->
+      <main class="hero">
+         <div class="container form-container">
+            <form class="well form-horizontal" action="/php/create_customer.php" method="POST" id="contact_form" target="_self">
+               <fieldset>
+                  <!-- Form Name -->
+                  <legend>Create a New Customer</legend>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Customer ID</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                           <input  name="first_name" placeholder="Customer ID" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">First Name</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                           <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" >Last Name</label> 
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                           <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">E-Mail</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                           <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Phone #</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                           <input name="phone" placeholder="052-555-1212" class="form-control" type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">City</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                           <input name="city" placeholder="City" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input -->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Address</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                           <input name="address" placeholder="Address" class="form-control" type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Zip Code</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                           <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Number input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Floor</label>  
+                     <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                           <input name="floor" placeholder="Floor Number" class="form-control" type="number">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- radio checks -->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Is there an elevator?</label>
+                     <div class="col-md-4">
+                        <div class="radio">
+                           <label>
+                           <input type="radio" name="elevator" value="yes" /> Yes
+                           </label>
+                        </div>
+                        <div class="radio">
+                           <label>
+                           <input type="radio" name="elevator" value="no" /> No
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Success message -->
+                  <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks! Customer created successfully.</div>
+                  <!-- Button -->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label"></label>
+                     <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning" >Save <span class="glyphicon glyphicon-floppy-disk"></span></button>
+                     </div>
+                  </div>
+               </fieldset>
+            </form>
+         </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+         <!-- Footer content -->
+      </footer>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css"></script>
+      <script src="js/loadCommonParts_admin.js"></script>
+      <script src="js/new_customer.js"></script>
+   </body>
+</html>
